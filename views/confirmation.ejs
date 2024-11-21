@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <title>Poppa's Pizza</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/pizza-slice.png" />
+  </head>
+
+  <body>
+    <div id="main">
+      <header>
+        <img src="images/pizza-guy.png" alt="Pizza Guy" />
+        <h1>Poppa's Pizza</h1>
+        <h2>Serving GRC Students Since 2020</h2>
+        <hr />
+        <p>We make really good pizza</p>
+        <a class="main-button" role="button" href="#">Contact Us</a>
+      </header>
+
+      <!-- 
+  [Object: null prototype] {
+  fname: 'First',
+  lname: 'Last',
+  email: 'email@email.com',
+  method: 'delivery',
+  toppings: [ 'pepperoni', 'sausage' ],
+  size: 'med',
+  comment: 'Words are the conduit to inner thought',
+  discount: 'on'
+} -->
+
+      <h1>
+        Thank you for your order, <%= details.fname %> <%= details.lname %>!
+      </h1>
+      <p>Method: <%= details.method %></p>
+      <p>Size: <%= details.size %></p>
+      <p>Comment: <%= details.comment %></p>
+      <p><%= details.toppings ? details.toppings : "No toppings selected" %></p>
+      <% if(details.discount == "on") { %>
+      <p>
+        Your email has been added to our discounts mailing list, keep an eye out
+        for those deals!
+      </p>
+      <% } %>
+    </div>
+  </body>
+</html>
